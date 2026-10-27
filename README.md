@@ -1,0 +1,2 @@
+# bakaMutsumi.github.io
+MyownPages
