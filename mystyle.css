@@ -1,10 +1,37 @@
-.avatar {
-  width: 120px;
-  height: 120px;
+.avatar{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.avatar-img {
+  width: 91px;
+  height: 91px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;   /* 裁剪时以中心为准 */
   border: 3px solid #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   display: block;
+  transition: transform 0.4s ease;
+}
+
+.avatar-body {
+  .discription{
+    font-size: 25px;
+    transform: translateX(-5%);
+    opacity: 0;                     /* 淡入 */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  flex: 1;               /* 文字区域占满剩余宽度 */
+  min-width: 0;         /* 防止长英文/链接撑破布局 */
+}
+
+.avatar:hover .avatar-img{
+  transform: scale(1.05);
+}
+
+.avatar:hover .avatar-body .discription{
+  transform: translateX(0);       /* 滑回原位 */
+  opacity: 1;
 }
