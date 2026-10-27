@@ -17,7 +17,7 @@
 }
 
 .avatar-body {
-  .discription{
+  .description{
     font-size: 25px;
     transform: translateX(-5%);
     opacity: 0;                     /* 淡入 */
@@ -27,11 +27,11 @@
   min-width: 0;         /* 防止长英文/链接撑破布局 */
 }
 
-.avatar:hover .avatar-img{
+.avatar-img:hover{
   transform: scale(1.05);
 }
 
-.avatar:hover .avatar-body .discription{
+.avatar-img:hover ~ .avatar-body .description{
   transform: translateX(0);       /* 滑回原位 */
   opacity: 1;
 }
